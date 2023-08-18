@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>traversing child</title>
+</head>
+<body>
+    <ul class="parent">
+        <li class="first-child">1st child</li>
+        <li>2nd child</li>
+        <li>3rd child</li>
+        <li class="middle-child">4th child</li>
+        <li>5th child</li>
+        <li>6th child</li>
+        <li class="last-child">7th child</li>
+    </ul>
+
+    <script>
+        const parent = document.querySelector(".parent");
+
+        console.log(parent.firstElementChild);// firstElementChild for get first child
+
+        console.log(parent.lastElementChild);// lastElementChild for get last child
+
+        console.log(parent.children);// children for get all child
+        
+        
+
+    </script>
+    
+</body>
+</html>

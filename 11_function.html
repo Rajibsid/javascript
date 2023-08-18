@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+</head>
+<body>
+    <script>
+
+        // function write in js
+
+        function calculateArea(width, height) {
+            const area = width * height;
+            return area;
+        }
+        const area = calculateArea(30, 40);
+        console.log(area);
+
+        // variable scope
+
+        const fileName = 'abc.pdf';
+
+        function download() {
+            console.log(fileName);
+        }
+        download();
+
+        // callback function
+        
+        function formatText(text, formatCb) {
+            return typeof formatCb === 'function' ? formatCb(text) : text.toUpperCase();
+        }
+
+        const result = formatText('hello', function(text){
+            return text.charAt(0).toUpperCase() + text.slice(1);
+        });
+
+        console.log(result);
+
+
+        // IIFE (Immediately Invoked function expression)
+
+        (function setup() {
+            console.log('setup done');
+        })();
+        
+
+        // arrow function
+
+        const sum = (num1, num2) => {
+            return num1 + num2;
+        }
+        
+        const resulr = sum(4, 8);
+        console.log(resulr);
+
+
+
+    </script>
+    
+</body>
+</html>

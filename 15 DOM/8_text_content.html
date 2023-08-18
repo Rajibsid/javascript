@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text content</title>
+</head>
+<body>
+
+    <div id="note">
+        here some content
+        <span style="display: none;">hidden content</span>
+    </div>
+    
+    <script>
+        // for hidden text show in console
+        const note = document.getElementById("note");
+        // console.log(note.innerText);
+        console.log(note.textContent); // can display hidden content in console
+    </script>
+</body>
+</html>

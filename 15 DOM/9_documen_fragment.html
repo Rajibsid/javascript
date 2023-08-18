@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document fragment</title>
+</head>
+<body>
+
+    <ul id="menu"></ul>
+
+    <script>
+        // Document fragment
+        const menu = document.querySelector("#menu");
+        const codes = ['js','java','html'];
+
+        const fragment = document.createDocumentFragment();
+
+        codes.forEach((codes) => {
+            const li = document.createElement("li");
+            li.textContent = codes;
+            fragment.appendChild(li);
+        });
+        menu.appendChild(fragment);
+
+    </script>
+    
+</body>
+</html>

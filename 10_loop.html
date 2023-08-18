@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loop in js</title>
+</head>
+<body>
+    <script>
+
+        // loop in js
+
+        const actors =  [
+            {
+                name : 'actor 1',
+                payment : '5000',
+                age : '23'
+            },
+            {
+                name : 'actor 2',
+                payment : '400',
+                age : '25'
+            },
+            {
+                name : 'actor 3',
+                payment : '4020',
+                age : '27'
+            }
+        ];
+        // here decrease 20 from all actors payment by for loop
+
+        for (let i = 0; i < actors.length; i++){
+            actors[i].payment = actors[i].payment - 20;
+        }
+
+        // foreach loop for better
+        actors.forEach((actor) => {
+            actor.payment = actor.payment - 20;
+        });
+
+        // for of loop 
+        for (let actor of actors){
+            actor.payment =  actor.payment - 20;
+        }
+        
+        // output
+        // console.log(actors);
+
+        // filter
+
+        const students = [
+            {
+                name : 'raj',
+                mark : '52'
+            },
+            {
+                name : 'zihad',
+                mark : '22'
+            },
+            {
+                name : 'rakibul',
+                mark : '32'
+            }
+            
+        ];
+
+        // filter method and select specific
+
+        const faild = students.filter((student) => {
+
+            return student.mark < 33;
+            // if(student.mark < 33) {
+            //     return true;
+            // } else {
+            //     return false;
+            // }
+        });
+        
+        // console.log(faild);
+
+
+        // map method
+        const users = [
+            {
+                fname : 'john',
+                lname : 'doe'
+            },
+            {
+                fname : 'jane',
+                lname : 'doe'
+            }
+        ];
+        // map method for get data from array
+        const finalusers = users.map((user) => {
+            return {
+                fullname : `${user.fname} ${user.lname}`
+            };
+        });
+        //console.log(finalusers);
+
+
+
+        // reduce method
+        const movies = [
+            {
+                name : "intersteller",
+                budget : 500
+            },
+            {
+                name : "Social",
+                budget : 450
+            },
+            {
+                name : "matrix",
+                budget : 260
+            }
+        ];
+        // reduce method for total output
+        const total = movies.reduce((acc, movie) => {
+            acc = acc + movie.budget;
+            return acc;
+        }, 0);
+        //console.log(total);
+
+
+        // Indexof method
+        const admins = [2, 1, 5];
+
+        const user = {
+            name : "xyz",
+            id : 5
+        }
+        // Indexof method for if data is or not in array
+        const isAdmin = admins.indexOf(user.id) > -1;
+        //console.log(isAdmin);
+
+
+        // or we can use includes as alternative of Indexof
+        //console.log(admins.includes(user.id));
+
+
+
+        // find method
+        const users2 = [
+            {
+                name : 'abc',
+                id : 1
+            },
+            {
+                name : 'xyz',
+                id : 2
+            },
+            {
+                name : 'pqr',
+                id : 3
+            }
+        ];
+        // find method for find from array
+        const myUser = users2.find((user) => {
+
+            //return user.id === 2;
+            return user.name === 'pqr';
+
+        });
+
+        //console.log(myUser);
+
+
+        // sort
+
+        const names = ['john','jane','rafiq','ram','sham','jadu'];
+
+        // sort an array alphabetically
+        names.sort();
+
+        // splice use for remove array item
+        names.splice(2, 2);
+
+        console.log(names);
+
+    </script>
+    
+</body>
+</html>

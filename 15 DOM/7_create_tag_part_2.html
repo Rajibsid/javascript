@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom manipulation</title>
+</head>
+<body>
+
+    <div id="menu2"></div>
+
+    <script>
+        // normal system for create many element into div
+
+        const div = document.createElement("div");// create div
+        div.id = "details";// assign id
+        
+        const p = document.createElement("p");// create p
+        const p2 = document.createElement("p2");
+
+        p.innerHTML = "here some details"; // content in p
+        p2.innerHTML = "2 here some details";
+
+        div.appendChild(p); // assign p into div
+        div.appendChild(p2);
+
+        document.body.appendChild(div);// assign div into body
+
+        // best system for create element
+
+        const menu = document.querySelector("#menu2");
+
+        function createMenu(item){
+
+            const li = document.createElement("li");
+            li.textContent = item;
+            return li;
+        }
+
+        menu.appendChild(createMenu("Home"));
+        menu.appendChild(createMenu("About"));
+        menu.appendChild(createMenu("Blog"));
+        menu.appendChild(createMenu("Contact"));
+
+    </script>
+    
+</body>
+</html>

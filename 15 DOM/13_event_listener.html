@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event listener</title>
+</head>
+<body>
+    <button id="button1">click me</button><br><br><br>
+    <button id="button2">hover me or click</button>
+
+    <p id="demo"></p>
+    <script>
+        // add event handler
+        document.getElementById("button1").addEventListener("click",myFunc);
+        function myFunc() {
+            alert("hello js");
+        }
+        // add many event handler
+
+        var x = document.getElementById("button2");
+        x.addEventListener("mouseover", firstFunc);
+        x.addEventListener("click", secondFunc);
+        x.addEventListener("mouseout", thirdFunc);
+
+        function firstFunc() {
+            document.getElementById("demo").innerHTML += "mouse over<br>";
+        }
+        function secondFunc() {
+            document.getElementById("demo").innerHTML += "clicked<br>";
+        }
+        function thirdFunc() {
+            document.getElementById("demo").innerHTML += "mouse out<br>";
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+</head>
+<body>
+
+
+    <form name="my_form" action="" method="post" onsubmit="return validateForm()">
+        <label for="name">Full Name</label>
+        <input type="text" name="name" id="name">
+        <button type="submit">Submit</button>
+    </form>
+    
+
+    <script>
+        // form validation
+        function validateForm() {
+            const form = document.forms['my_form']['name'].value;
+            if (form == "") {
+                alert("please fill uo the input field must before submit");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

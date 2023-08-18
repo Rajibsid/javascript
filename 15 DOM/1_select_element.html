@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select element - DOM</title>
+</head>
+<body>
+    <h1 id="heading1">hi</h1>
+    <h1 class="heading2">hi</h1>
+    <h1 name="heading3">hi</h1>
+    <h1>hi</h1>
+
+    <script>
+        // selecting element dom
+        // id selector
+        const id1 = document.getElementById("heading1");
+        id1.innerHTML = "output from id selector";
+
+        // class selector
+        const class1 = document.getElementsByClassName("heading2")[0];
+        class1.innerHTML = "output from class selector";
+
+        // select by name
+        const name1 = document.getElementsByName("heading3")[0];
+        name1.innerHTML = "output from name attribute";
+
+        // select by tag
+        const tag1 = document.getElementsByTagName("h1")[3];
+        tag1.innerHTML = "output from tagname";
+
+        // query selector
+        // query selector use for id , class, tag all selector
+
+        document.querySelector("#heading1"); // for id select
+
+        document.querySelector(".heading2"); // for class select
+
+        document.querySelector("h1"); // only select 1st tag
+
+        document.querySelectorAll("h1")[2]; // here can select any tag
+
+
+    </script>
+</body>
+</html>

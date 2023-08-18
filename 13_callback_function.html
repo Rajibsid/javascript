@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback function</title>
+</head>
+<body>
+
+    <script>
+        // callack function in js
+    function add(a, b, callback) {
+        console.log(`the sum of ${a} and ${b} is ${a+b}`);
+        callback();
+    }
+
+    add(5, 6, () => console.log('addition done'));
+    </script>
+
+</body>
+</html>
